@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('test ls') {
+    stage('Build') {
       steps {
-        sh 'ls'
+        sh 'docker build -t img-docker-node-example .'
       }
     }
 
