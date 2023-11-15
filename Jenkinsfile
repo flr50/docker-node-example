@@ -4,6 +4,7 @@ pipeline {
     stage('Tests') {
       steps {
         echo 'start tests stage'
+        sh 'ls'
         sleep 30
         echo 'end tests stage'
       }
