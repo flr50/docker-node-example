@@ -1,11 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Tests') {
+    stage('test ls') {
       steps {
-        echo 'start tests stage'
         sh 'ls'
-        echo 'end tests stage'
       }
     }
 
