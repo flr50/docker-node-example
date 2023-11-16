@@ -22,6 +22,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'start deploy'
+        sh 'docker run --name cnt-docker-node-exmaple -d -p 8000:8000 img-docker-node-example'
       }
     }
 
