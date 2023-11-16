@@ -27,7 +27,7 @@ pipeline {
       steps {
         echo 'start deploy'
         discordSend(webhookURL: 'https://discord.com/api/webhooks/1174361941305741352/-zar7V61kIeLtcG6XGEj464IRm4jLD-kq0c0_AD0WJKczil3wRJsNKR-70iGP8-vmYW6', customUsername: 'SUPERVISION_JENKINS', description: 'DEPLOY_START', title: 'INFO_DEPLOY')
-        sh 'docker run --name cnt-docker-node-exmaple -d -p 8000:8000 img-docker-node-example'
+        sh 'docker run --name cnt-docker-node-exmaple -d -p 8000:80 img-docker-node-example'
         discordSend(webhookURL: 'https://discord.com/api/webhooks/1174361941305741352/-zar7V61kIeLtcG6XGEj464IRm4jLD-kq0c0_AD0WJKczil3wRJsNKR-70iGP8-vmYW6', customUsername: 'SUPERVISION_JENKINS', description: 'DEPLOY_END', title: 'INFO_DEPLOY')
         discordSend(webhookURL: 'https://discord.com/api/webhooks/1174361941305741352/-zar7V61kIeLtcG6XGEj464IRm4jLD-kq0c0_AD0WJKczil3wRJsNKR-70iGP8-vmYW6', customUsername: 'SUPERVISION_JENKINS', description: 'DEPLOY_SUCCES', title: 'INFO_DEPLOY')
         echo 'end deploy'
